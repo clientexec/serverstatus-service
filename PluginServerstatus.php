@@ -15,70 +15,70 @@ class PluginServerstatus extends ServicePlugin
     function getVariables()
     {
         $variables = array(
-            /*T*/'Plugin Name'/*/T*/   => array(
+            lang('Plugin Name')   => array(
                 'type'          => 'hidden',
-                'description'   => /*T*/''/*/T*/,
-                'value'         => /*T*/'Server Status'/*/T*/,
+                'description'   => '',
+                'value'         => lang('Server Status'),
             ),
-            /*T*/'Enabled'/*/T*/       => array(
+            lang('Enabled')       => array(
                 'type'          => 'yesno',
-                'description'   => /*T*/'When enabled and server plugin has server stats script URL, ClientExec will notify you if the server is not responding or when certain thresholds are met.'/*/T*/,
+                'description'   => lang('When enabled and server plugin has server stats script URL, ClientExec will notify you if the server is not responding or when certain thresholds are met.'),
                 'value'         => '0',
             ),
-            /*T*/'Admin E-mail'/*/T*/     => array(
+            lang('Admin E-mail')     => array(
                 'type'          => 'textarea',
-                'description'   => /*T*/'E-mails that will be E-mailed when thresholds are passed. Enter each E-mail in a separate line.'/*/T*/,
+                'description'   => lang('E-mails that will be E-mailed when thresholds are passed. Enter each E-mail in a separate line.'),
                 'value'         => '',
             ),
-            /*T*/'1 Min. Load Average'/*/T*/     => array(
+            lang('1 Min. Load Average')     => array(
                 'type'          => 'text',
-                'description'   => /*T*/'Add 1 Minute server load average threshold you want this service to E-mail if passed.<br/>Ex: 1.5, will E-mail when load goes over 1.5'/*/T*/,
+                'description'   => lang('Add 1 Minute server load average threshold you want this service to E-mail if passed.<br/>Ex: 1.5, will E-mail when load goes over 1.5'),
                 'value'         => '',
             ),
-            /*T*/'5 Min. Load Average'/*/T*/     => array(
+            lang('5 Min. Load Average')     => array(
                 'type'          => 'text',
-                'description'   => /*T*/'Add 5 Minute server load average threshold you want this service to E-mail if passed.<br/>Ex: 1.5, will E-mail when load goes over 1.5'/*/T*/,
+                'description'   => lang('Add 5 Minute server load average threshold you want this service to E-mail if passed.<br/>Ex: 1.5, will E-mail when load goes over 1.5'),
                 'value'         => '',
             ),
-            /*T*/'Used Physical Memory'/*/T*/     => array(
+            lang('Used Physical Memory')     => array(
                 'type'          => 'text',
-                'description'   => /*T*/'Add used physical memory threshold in megabytes (MB) you want this service to E-mail if passed. Current cache use will be subtracted from the Used Physical Memory on the server.<br/>Ex: 512, will E-mail when memory goes over 512 MB'/*/T*/,
+                'description'   => lang('Add used physical memory threshold in megabytes (MB) you want this service to E-mail if passed. Current cache use will be subtracted from the Used Physical Memory on the server.<br/>Ex: 512, will E-mail when memory goes over 512 MB'),
                 'value'         => '',
             ),
-            /*T*/'Server Restarted'/*/T*/  => array(
+            lang('Server Restarted')  => array(
                 'type'          => 'yesno',
-                'description'   => /*T*/'Notify if the server was restarted since the last check.'/*/T*/,
+                'description'   => lang('Notify if the server was restarted since the last check.'),
                 'value'         => '0',
             ),
-            /*T*/'Mount Space Available'/*/T*/     => array(
+            lang('Mount Space Available')     => array(
                 'type'          => 'text',
-                'description'   => /*T*/'Add mount and percentage threshold that you want this service to E-mail you on. Use ; as separator if you want to monitor more than one mount.<br/>Ex: /home,75;/tmp,50'/*/T*/,
+                'description'   => lang('Add mount and percentage threshold that you want this service to E-mail you on. Use ; as separator if you want to monitor more than one mount.<br/>Ex: /home,75;/tmp,50'),
                 'value'         => '',
             ),
-            /*T*/'Run schedule - Minute'/*/T*/  => array(
+            lang('Run schedule - Minute')  => array(
                 'type'          => 'text',
-                'description'   => /*T*/'Enter number, range, list or steps'/*/T*/,
+                'description'   => lang('Enter number, range, list or steps'),
                 'value'         => '*',
                 'helpid'        => '8',
             ),
-            /*T*/'Run schedule - Hour'/*/T*/  => array(
+            lang('Run schedule - Hour')  => array(
                 'type'          => 'text',
-                'description'   => /*T*/'Enter number, range, list or steps'/*/T*/,
+                'description'   => lang('Enter number, range, list or steps'),
                 'value'         => '*',
             ),
-            /*T*/'Run schedule - Day'/*/T*/  => array(
+            lang('Run schedule - Day')  => array(
                 'type'          => 'text',
-                'description'   => /*T*/'Enter number, range, list or steps'/*/T*/,
+                'description'   => lang('Enter number, range, list or steps'),
                 'value'         => '*',
             ),
-            /*T*/'Run schedule - Month'/*/T*/  => array(
+            lang('Run schedule - Month')  => array(
                 'type'          => 'text',
-                'description'   => /*T*/'Enter number, range, list or steps'/*/T*/,
+                'description'   => lang('Enter number, range, list or steps'),
                 'value'         => '*',
             ),
-            /*T*/'Run schedule - Day of the week'/*/T*/  => array(
+            lang('Run schedule - Day of the week')  => array(
                 'type'          => 'text',
-                'description'   => /*T*/'Enter number in range 0-6 (0 is Sunday) or a 3 letter shortcut (e.g. sun)'/*/T*/,
+                'description'   => lang('Enter number in range 0-6 (0 is Sunday) or a 3 letter shortcut (e.g. sun)'),
                 'value'         => '*',
             ),
         );
