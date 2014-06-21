@@ -560,7 +560,7 @@ class PluginServerstatus extends ServicePlugin
         require_once 'library/CE/NE_Network.php';
 
         $strErrorMessage = '' ;
-        $xmldata = NE_Network::curlRequest($this->settings, $statsurl, false, false, true, true);
+        $xmldata = NE_Network::curlRequest($this->settings, $statsurl, false, false, true, false);
 
         $status = "Server not responding-> server: $serverId";
 
