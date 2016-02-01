@@ -55,6 +55,11 @@ class PluginServerstatus extends ServicePlugin
                 'description'   => lang('Add mount and percentage threshold that you want this service to E-mail you on. Use ; as separator if you want to monitor more than one mount.<br/>Ex: /home,75;/tmp,50'),
                 'value'         => '',
             ),
+            lang('Ignore Mount Point Errors')  => array(
+                'type'          => 'yesno',
+                'description'   => lang('Enabling this option will cause Clientexec not to error if it can not find a mount point'),
+                'value'         => '0',
+            ),
             lang('Run schedule - Minute')  => array(
                 'type'          => 'text',
                 'description'   => lang('Enter number, range, list or steps'),
@@ -297,7 +302,9 @@ class PluginServerstatus extends ServicePlugin
                         $status[] = $strError;
                     }
                 }else{
+                    if ( $this->settings->get('plugin_serverstatus_Ignore Mount Point Errors') == 0 ) {
                         $status[] = new CE_Error("Server ".$servername." Mount Threshold Error: ".$tMount. " does not exist on server ".$servername);
+                    }
                 }
             }
         }
